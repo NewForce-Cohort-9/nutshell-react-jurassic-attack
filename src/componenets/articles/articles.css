@@ -1,0 +1,10 @@
+.articles{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.single-article{
+    width: 30%;
+    border: 1px solid black;
+    margin: 10px;
+}
