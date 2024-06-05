@@ -6,7 +6,7 @@ import { Navbar } from "./componenets/navbar/navbar";
 import { Outlet, Route, Routes } from "react-router-dom";
 import { Articles } from "./componenets/articles/articles";
 import { NewArticle } from "./componenets/articles/newArticle";
-import { ImageGallery } from './components/images/ImageGallery'
+import { ImageGallery } from './componenets/images/ImageGallery'
 
 function App() {
   const [count, setCount] = useState(0);

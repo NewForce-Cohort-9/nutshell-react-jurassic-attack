@@ -1,0 +1,10 @@
+.images{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.single-image{
+    width: 30%;
+    border: 1px solid black;
+    margin: 10px;
+}
