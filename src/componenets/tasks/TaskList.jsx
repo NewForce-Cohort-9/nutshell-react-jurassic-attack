@@ -3,6 +3,7 @@ import "./Tasks.css";
 import { getAllTasks } from "../services/taskServices.jsx";
 import { Task } from "./Task.jsx";
 import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 export const TaskList = () => {
   const [allTasks, setAllTasks] = useState([]);
@@ -16,7 +17,7 @@ export const TaskList = () => {
   return (
     <div>
       <header className="header-tasks">Tasks</header>
-      <Button outline size="sm">Create New Task</Button>
+      <Link to="/createTask"><Button outline size="sm">Create New Task</Button></Link>
       {allTasks.map((singleTask) => {
         return <Task id={singleTask.id} singleTask={singleTask} />;
       })}

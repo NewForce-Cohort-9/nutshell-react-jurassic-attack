@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createTasks } from "../services/tasksServices.jsx";
+import { createTasks } from "../services/taskServices.jsx";
 import { Button, Form, Input } from "reactstrap";
 import "./Form.css";
 
@@ -27,12 +27,13 @@ export const TaskCreateForm = ({ currentUser }) => {
       <h2>Create New Task</h2>
       <div>
         <Input
+          type="text"
           text="text"
-          placeholder="Tasks Title"
+          placeholder="What's your task?"
           onChange={(event) => {
-            const eventCopy = { ...myTasks };
-            eventCopy.title = event.target.value;
-            setMyEvent(eventCopy);
+            const taskCopy = { ...myTasks };
+            taskCopy.task = event.target.value;
+            setMyTasks(taskCopy);
           }}
         />
       </div>
@@ -42,9 +43,9 @@ export const TaskCreateForm = ({ currentUser }) => {
           text="text"
           placeholder="Date"
           onChange={(event) => {
-            const eventCopy = { ...myTasks };
-            eventCopy.date = event.target.value;
-            setMyEvent(eventCopy);
+            const taskCopy = { ...myTasks };
+            taskCopy.date = event.target.value;
+            setMyTasks(taskCopy);
           }}
         />
       </div>

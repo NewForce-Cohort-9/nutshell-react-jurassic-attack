@@ -6,6 +6,7 @@ import { Navbar } from "../componenets/navbar/navbar";
 import { TaskEventContainer } from "../componenets/TaskEventContainer.jsx";
 import { EventCreateForm } from "../componenets/forms/EventCreateForm.jsx";
 import { TaskCreateForm } from "../componenets/forms/TaskCreateForm.jsx";
+import { EditArticle } from "../componenets/articles/editArticle";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -27,10 +28,13 @@ export const ApplicationViews = () => {
           </>
         }
       >
-        <Route
-          path="articles"
-          element={<Articles currentUser={currentUser} />}
-        />
+        <Route path="articles">
+          <Route index element={<Articles currentUser={currentUser} />} />
+          <Route
+            path=":articleId/editArticle"
+            element={<EditArticle currentUser={currentUser} />}
+          />
+        </Route>
         <Route
           path="newArticle"
           element={<NewArticle currentUser={currentUser} />}
