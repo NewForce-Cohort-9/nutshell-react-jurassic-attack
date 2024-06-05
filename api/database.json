@@ -9,11 +9,6 @@
       "id": 2,
       "username": "Altoid",
       "email": "email@email.com"
-    },
-    {
-      "email": "hotmail@hotmail.com",
-      "username": "pikachu",
-      "id": 3
     }
   ],
   "articles": [
@@ -24,6 +19,13 @@
       "title": "Horses Run Rampant Through London",
       "synopsis": "5 military horses escaped last week and ere seen running through London.",
       "timestamp": "06/04/2024"
+    },
+    {
+      "title": "",
+      "synopsis": "",
+      "url": "",
+      "timestamp": "Tue Jun 04 2024 14:49:19 GMT-0400 (Eastern Daylight Time)",
+      "id": 2
     }
   ],
   "events": [
@@ -56,6 +58,21 @@
       "userId": 1,
       "url": "https://static.miraheze.org/greatcharacterswiki/a/a3/Farquaad.png",
       "caption": "He's literally so dreamy <3"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/poohadventures/images/1/12/Duchess.png/revision/latest?cb=20150909200513",
+      "caption": "Whatchu know about the Duchess?",
+      "id": 2
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/poohadventures/images/1/12/Duchess.png",
+      "caption": "",
+      "id": 3
+    },
+    {
+      "url": "https://pm1.aminoapps.com/6759/e814f3473f6a0c2a480cfe2b8f4ab8b39bd7bdb2v2_00.jpg",
+      "caption": "it's hot in topeka",
+      "id": 4
     }
   ],
   "friends": [
