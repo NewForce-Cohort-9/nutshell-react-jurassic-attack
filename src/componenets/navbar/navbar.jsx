@@ -19,9 +19,22 @@ export const Navbar = () => {
       <li className="navbar-item">
         <Link className="navbar-link">Chat</Link>
       </li>
-      <li className="navbar-item">
-        <Link className="navbar-link">Logout</Link>
-      </li>
+      {localStorage.getItem("nutshell_user") ? (
+        <li className="navbar-item">
+          <Link
+            className="navbar-link"
+            to=""
+            onClick={() => {
+              localStorage.removeItem("nutshell_user");
+              navigate("/login", { replace: true });
+            }}
+          >
+            Logout
+          </Link>
+        </li>
+      ) : (
+        ""
+      )}
     </ul>
   );
 };
