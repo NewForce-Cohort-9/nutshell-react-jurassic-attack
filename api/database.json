@@ -9,6 +9,11 @@
       "id": 2,
       "username": "Altoid",
       "email": "email@email.com"
+    },
+    {
+      "email": "hotmail@hotmail.com",
+      "username": "pikachu",
+      "id": 3
     }
   ],
   "articles": [
