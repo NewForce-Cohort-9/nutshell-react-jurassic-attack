@@ -3,7 +3,7 @@ import "./articles.css";
 import { useNavigate } from "react-router-dom";
 import { createArticle } from "../services/articleservices";
 
-export const NewArticle = () => {
+export const NewArticle = ({currentUser}) => {
   const [newArticle, setNewArticle] = useState({
     url: "",
     title: "",
@@ -19,7 +19,8 @@ export const NewArticle = () => {
         title: newArticle.title,
         synopsis: newArticle.synopsis,
         url: newArticle.url,
-        timestamp: Date()
+        timestamp: Date(),
+        userId: currentUser.id
     }
     createArticle(article).then(() => {
         navigate("/articles")
@@ -59,7 +60,7 @@ export const NewArticle = () => {
           <input
             text="text"
             className="form-control"
-            placeholder="Summary of Article"
+            placeholder="URL"
             onChange={(event) => {
               const articleCopy = { ...newArticle };
               articleCopy.url = event.target.value;
