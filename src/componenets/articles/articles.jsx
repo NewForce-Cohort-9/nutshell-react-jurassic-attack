@@ -20,10 +20,10 @@ export const Articles = () => {
             <div className="articles">
                 {articles.map((article) => {
                     return (
-                        <div className="single-article">
+                        <div className="single-article" key={article.id}>
                             <h2>{article.title}</h2>
                             <p>{article.synopsis}</p>
-                            <a>{article.url}</a>
+                            <a href={article.url}>Source</a>
 
                         </div>
                     )
