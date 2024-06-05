@@ -19,7 +19,6 @@ export const EventList = () => {
       <Button outline size="sm">
         Create New Event
       </Button>
-
       {allEvents.map((singleEvent) => {
         return <Event id={singleEvent.id} singleEvent={singleEvent} />;
       })}
