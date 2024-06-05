@@ -5,15 +5,16 @@ import { NewArticle } from "../componenets/articles/newArticle";
 import { Navbar } from "../componenets/navbar/navbar";
 import { TaskEventContainer } from "../componenets/TaskEventContainer.jsx";
 import { EventCreateForm } from "../componenets/forms/EventCreateForm.jsx";
+import { TaskCreateForm } from "../componenets/forms/TaskCreateForm.jsx";
 
 export const ApplicationViews = () => {
-    const [currentUser, setCurrentUser] = useState({});
+  const [currentUser, setCurrentUser] = useState({});
 
-    useEffect(() => {
-      const localNutshellUser = localStorage.getItem("nutshell_user");
-      const nutshellUserObject = JSON.parse(localNutshellUser);
-      setCurrentUser(nutshellUserObject);
-    }, []);
+  useEffect(() => {
+    const localNutshellUser = localStorage.getItem("nutshell_user");
+    const nutshellUserObject = JSON.parse(localNutshellUser);
+    setCurrentUser(nutshellUserObject);
+  }, []);
 
   return (
     <Routes>
@@ -26,10 +27,26 @@ export const ApplicationViews = () => {
           </>
         }
       >
-        <Route path="articles" element={<Articles currentUser={currentUser}/>} />
-        <Route path="newArticle" element={<NewArticle currentUser={currentUser}/>} />
-        <Route path="TaskEventContainer" element={<TaskEventContainer currentUser={currentUser}/>} />
-        <Route path="createEvent" element={<EventCreateForm currentUser={currentUser}/>} />
+        <Route
+          path="articles"
+          element={<Articles currentUser={currentUser} />}
+        />
+        <Route
+          path="newArticle"
+          element={<NewArticle currentUser={currentUser} />}
+        />
+        <Route
+          path="TaskEventContainer"
+          element={<TaskEventContainer currentUser={currentUser} />}
+        />
+        <Route
+          path="createEvent"
+          element={<EventCreateForm currentUser={currentUser} />}
+        />
+        <Route
+          path="createTask"
+          element={<TaskCreateForm currentUser={currentUser} />}
+        />
       </Route>
     </Routes>
   );
