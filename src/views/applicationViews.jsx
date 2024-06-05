@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Home } from "../componenets/home/home.jsx"
+
 import { Outlet, Route, Routes } from "react-router-dom";
 import { Articles } from "../components/articles/articles";
 import { NewArticle } from "../components/articles/newArticle";
@@ -33,13 +35,7 @@ export const ApplicationViews = () => {
           </>
         }
       >
-        <Route path="articles" element={<Articles currentUser={currentUser}/>} />
-        <Route path="newArticle" element={<NewArticle currentUser={currentUser}/>} />
-        <Route path="images"> 
-          <Route index element={<ImageGallery currentUser={currentUser}/>} />
-          <Route path=":newImage" element={<NewImage currentUser={currentUser}/>} />
-        </Route>
-          <Route path="/notImages/:imageId" element={<UpdateImage currentUser={currentUser}/>} />
+        <Route path="/"element={<Home currentUser={currentUser}/>} />
         <Route path="articles">
           <Route index element={<Articles currentUser={currentUser} />} />
         <Route
