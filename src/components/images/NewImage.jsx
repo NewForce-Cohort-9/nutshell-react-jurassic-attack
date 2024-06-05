@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Form, FormGroup, Input } from "reactstrap";
 import { createImage } from "../services/ImageService";
 
-export const NewImage = () => {
+export const NewImage = ({ currentUser }) => {
     const [newImage, setNewImage] = useState({
         url: "",
         caption: "",
@@ -16,7 +16,8 @@ export const NewImage = () => {
     
         const image = {
             url: newImage.url,
-            caption: newImage.caption
+            caption: newImage.caption,
+            userId: currentUser.id
         }
         createImage(image).then(() => {
             navigate("/images")

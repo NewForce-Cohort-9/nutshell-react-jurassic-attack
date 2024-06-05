@@ -1,7 +1,7 @@
 import "./images.css";
 import { useEffect } from "react";
 import { useState } from "react";
-import { getAllImages } from "../services/ImageService";
+import { deleteImage, getAllImages } from "../services/ImageService";
 import { Button, Card, CardBody, CardSubtitle } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -14,6 +14,13 @@ export const ImageGallery = () => {
             setImages(imageArray)
         })
     }, []);
+
+    {/* Delete Ticket Button Function */}
+    const handleDelete = () => {
+        deleteImage(image.id).then(() => {
+        setImage()
+        })
+    }
 
     
     return (

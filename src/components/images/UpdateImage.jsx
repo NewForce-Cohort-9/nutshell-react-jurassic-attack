@@ -3,35 +3,36 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Button, Form, FormGroup, Input } from "reactstrap";
 import { getByImageId, updateImage } from "../services/ImageService";
 
+
+// UPDATE/EDIT SINGLE USER IMAGE
 export const UpdateImage = ({ currentUser }) => {
     const [image, setImage] = useState({});
-    const [updatedImage, setUpdatedImage] = useState({
-        url: "",
-        caption: "",
-    });
-
-    const {imageId} = useParams()
+    const {imageId} = useParams();
 
     useEffect(() => {
-        getByImageId(imageId).then((imageArray) => {
-            setImage(imageArray)
+        getByImageId(imageId).then((data) => {
+            const imgObj = data;
+            setImage(imgObj)
         })
-    }, []);
+    }, [imageId]);
 
     const navigate = useNavigate();
 
+    {/* Changing the value of the Inputs Function */}
+    // could only get it to work for the url...
     const handleInputChange = (event) => {
-        const stateCopy = { ...updatedImage }
+        const stateCopy = { ...image }
         stateCopy[event.target.name] = event.target.value
-        setUpdatedImage(stateCopy)
+        setImage(stateCopy)
       }
 
+    {/* Save Image Button Function */}
     const handleSave = (event) => {
         event.preventDefault()
     
         const editedImage = {
             id: image.id,
-            userId: image.userId,
+            userId: currentUser.id,
             url: image.url,
             caption: image.caption
         }
@@ -41,6 +42,7 @@ export const UpdateImage = ({ currentUser }) => {
     
       }
 
+    // JSX to display allImages
     return (
         <div className="form">
         
@@ -61,7 +63,11 @@ export const UpdateImage = ({ currentUser }) => {
                         name="text"
                         placeholder={image.caption}
                         type="textarea"
-                        onChange={handleInputChange}
+                        onChange={(event) => {
+                            const imageCopy = { ...image };
+                            imageCopy.caption = event.target.value;
+                            setImage(imageCopy);
+                          }}
                     />
                 </FormGroup>
                 </Form>
@@ -69,6 +75,7 @@ export const UpdateImage = ({ currentUser }) => {
             <Button color="primary" onClick={handleSave}>
                 Save Image
             </Button>
+
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Home } from "../componenets/home/home.jsx"
+import { Home } from "../components/home/home.jsx"
 
 import { Outlet, Route, Routes } from "react-router-dom";
 import { Articles } from "../components/articles/articles";
@@ -8,9 +8,6 @@ import { Navbar } from "../components/navbar/navbar";
 import { ImageGallery } from "../components/images/ImageGallery";
 import { NewImage } from "../components/images/NewImage";
 import { UpdateImage } from "../components/images/UpdateImage";
-import { Articles } from "../components/articles/articles";
-import { NewArticle } from "../components/articles/newArticle";
-import { Navbar } from "../components/navbar/navbar";
 import { TaskEventContainer } from "../components/TaskEventContainer.jsx";
 import { EventCreateForm } from "../components/forms/EventCreateForm.jsx";
 import { EditArticle } from "../components/articles/editArticle";
@@ -47,6 +44,12 @@ export const ApplicationViews = () => {
           path="newArticle"
           element={<NewArticle currentUser={currentUser} />}
         />
+        <Route path="images">
+          <Route index element={<ImageGallery currentUser={currentUser} />} />
+          <Route path=":newImage" element={<NewImage currentUser={currentUser} />} />
+        </Route>
+        <Route path="/notImages/:imageId" element={<UpdateImage currentUser={currentUser} />} />
+
         <Route path="TaskEventContainer" element={<TaskEventContainer currentUser={currentUser}/>} />
         <Route path="createEvent" element={<EventCreateForm currentUser={currentUser}/>} />
       </Route>

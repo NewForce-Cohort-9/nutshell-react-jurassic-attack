@@ -35,13 +35,6 @@
       "title": "Mary's Birthday",
       "date": "06/24/2024",
       "location": "Red Lobster"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "title": "Family Reunion",
-      "date": "09/07/2024",
-      "location": "Glenn Park"
     }
   ],
   "tasks": [
@@ -49,14 +42,6 @@
       "id": 1,
       "userId": 1,
       "task": "Takeout Trash",
-      "completeByDate": "07/01/2024",
-      "completed": false
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "task": "Appointment",
-      "completeByDate": "08/16/2024",
       "completed": false
     }
   ],
@@ -75,19 +60,21 @@
       "caption": "He's literally so dreamy <3"
     },
     {
-      "url": "https://static.wikia.nocookie.net/poohadventures/images/1/12/Duchess.png/revision/latest?cb=20150909200513",
-      "caption": "Whatchu know about the Duchess?",
-      "id": 2
-    },
-    {
+      "id": 2,
       "url": "https://static.wikia.nocookie.net/poohadventures/images/1/12/Duchess.png",
-      "caption": "",
-      "id": 3
+      "caption": "Whatchu know about the Duchess?"
     },
     {
+      "id": 3,
+      "userId": 1,
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2wTDWsejeqXPp8-wSnLgd497j6XDVM9XwuZhH6t82HPQwTfxQT9DZqBZstRMcjOb0M4&usqp=CAU",
+      "caption": "The walls have ears, Eddy"
+    },
+    {
+      "id": 4,
+      "userId": 1,
       "url": "https://pm1.aminoapps.com/6759/e814f3473f6a0c2a480cfe2b8f4ab8b39bd7bdb2v2_00.jpg",
-      "caption": "it's hot in topeka",
-      "id": 4
+      "caption": "It's hot in ToPEkA"
     }
   ],
   "friends": [
