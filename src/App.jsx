@@ -6,7 +6,6 @@ import { Navbar } from "./componenets/navbar/navbar";
 import { Outlet, Route, Routes } from "react-router-dom";
 import { Articles } from "./componenets/articles/articles";
 import { NewArticle } from "./componenets/articles/newArticle";
-
 import { Login } from "./componenets/auth/Login";
 import { Authorized } from "./views/Authorized";
 import { ApplicationViews } from "./views/applicationViews";
@@ -27,10 +26,7 @@ export const App = () => {
             <ApplicationViews />
           </Authorized>
         }
-      >
-        <Route path="articles" element={<Articles />} />
-        <Route path="newArticle" element={<NewArticle />} />
-      </Route>
+      />
     </Routes>
   );
 };
