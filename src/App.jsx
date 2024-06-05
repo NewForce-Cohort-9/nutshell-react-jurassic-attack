@@ -6,7 +6,7 @@ import { Navbar } from "./componenets/navbar/navbar";
 import { Outlet, Route, Routes } from "react-router-dom";
 import { Articles } from "./componenets/articles/articles";
 import { NewArticle } from "./componenets/articles/newArticle";
-import { TaskEventContainer } from "./componenets/TaskEventContainer.jsx";
+
 import { Login } from "./componenets/auth/Login";
 import { Authorized } from "./views/Authorized";
 import { ApplicationViews } from "./views/applicationViews";
@@ -30,7 +30,6 @@ export const App = () => {
       >
         <Route path="articles" element={<Articles />} />
         <Route path="newArticle" element={<NewArticle />} />
-        <Route path="TaskEventContainer" element={<TaskEventContainer/>} />
       </Route>
     </Routes>
   );

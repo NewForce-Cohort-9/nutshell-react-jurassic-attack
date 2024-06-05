@@ -1,4 +1,4 @@
-import { Button, Card, Row } from "reactstrap";
+import { Button, Card, FormGroup, Input, Label, Row } from "reactstrap";
 
 export const Task = ({ singleTask }) => {
   return (
@@ -16,10 +16,12 @@ export const Task = ({ singleTask }) => {
       <div>Complete By: {singleTask.completeByDate}</div>
 
 <Row>
-        <label>
-          done
-          <input type="checkbox" />
-        </label>
+<FormGroup check>
+    <Input type="checkbox" />
+    <Label check>
+      done
+    </Label>
+  </FormGroup>
 
         <Button color="light" size="sm">
           Edit

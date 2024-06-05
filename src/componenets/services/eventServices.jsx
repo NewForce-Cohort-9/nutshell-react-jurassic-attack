@@ -2,7 +2,7 @@ export const getAllEvents = () => {
     return fetch(`http://localhost:8088/events`).then((res) => res.json())
 }
 
-export const createEvents = (events) => {
+export const createEvent = (events) => {
     return fetch(`http://localhost:8088/events`, {
         method: "POST",
         headers: {
