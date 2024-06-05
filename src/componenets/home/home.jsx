@@ -3,8 +3,12 @@ import "./home.css";
 import { getAllArticles } from "../services/articleservices.jsx";
 import { getAllImages } from "../services/imageservices.jsx";
 
-export const Home = () => {
+export const Home = ({currentUser}) => {
   const [articles, setArticles] = useState([]);
+
+  const [myArticles, setMyArticles]= useState([])
+
+  const [myImages, setMyImages] = useState ([])
 
   useEffect(() => {
     getAllArticles().then((articlesArray) => {
@@ -12,6 +16,13 @@ export const Home = () => {
     });
   }, []);
 
+  useEffect(() =>{
+    const foundArticles = articles.filter((article) => article.userId === currentUser.id)
+    setMyArticles(foundArticles)
+    
+  },[articles])
+ 
+ 
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -20,10 +31,15 @@ export const Home = () => {
     });
     
   }, []);
+  useEffect(() =>{
+    const foundImages = images.filter((image) => image.userId === currentUser.id)
+    setMyImages(foundImages)
+    
+  },[images])
   return (
     <div>
       <div className="articles">
-        {articles.map((article) => {
+        {myArticles.map((article) => {
           return (
             <div className="single-article" key={article.id}>
               <h2>{article.title}</h2>
@@ -37,7 +53,7 @@ export const Home = () => {
 {/* work on the image section */}
 
       <div className="images">
-        {images.map((image) => {
+        {myImages.map((image) => {
           return (
             <div className="single-image" key={image.id}>
                 <img src={image.url} />
