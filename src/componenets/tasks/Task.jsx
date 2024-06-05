@@ -1,28 +1,15 @@
-import { useEffect, useState } from "react"
-import "./Tasks.css"
+import { Card } from "reactstrap"
 
-export const Task = () => {
-   const [assignedTask, setAssignedTask] = useState(); 
+export const Task = ({singleTask}) => {
+  return (
+    <Card className="my-2"
+    color="primary"
+    inverse
+    style={{
+      width: '18rem'
+    }}>
+      <h3>{singleTask.task}</h3>
+      <div>Complete By: {singleTask.completeByDate}</div>
+    </Card>
+  )
 }
-
-useEffect(() => {
-    getAllTasks()
-})
-
-return(
-    <section>
-        <header>Tasks</header>
-        <div>{task.task}</div>
-
-    </section>
-)
-
-
-
-// "tasks": [
-//     {
-//         "id": 1,
-//         "userId": 1,
-//         "task": "Takeout Trash",
-//         "completed": false
-//     }

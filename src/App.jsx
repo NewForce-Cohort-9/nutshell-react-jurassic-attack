@@ -6,6 +6,8 @@ import { Navbar } from "./componenets/navbar/navbar";
 import { Outlet, Route, Routes } from "react-router-dom";
 import { Articles } from "./componenets/articles/articles";
 import { NewArticle } from "./componenets/articles/newArticle";
+import { TaskEventContainer } from "./componenets/TaskEventContainer.jsx";
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +25,7 @@ function App() {
       >
         <Route path="articles" element={<Articles />} />
         <Route path="newArticle" element={<NewArticle />} />
+        <Route path="TaskEventContainer" element={<TaskEventContainer/>} />
       </Route>
     </Routes>
   );
