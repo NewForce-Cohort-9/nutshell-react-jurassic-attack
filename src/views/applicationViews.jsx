@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Home } from "../componenets/home/home.jsx"
+
 import { Outlet, Route, Routes } from "react-router-dom";
 import { Articles } from "../componenets/articles/articles";
 import { NewArticle } from "../componenets/articles/newArticle";
@@ -27,6 +29,7 @@ export const ApplicationViews = () => {
           </>
         }
       >
+        <Route path="/"element={<Home currentUser={currentUser}/>} />
         <Route path="articles">
           <Route index element={<Articles currentUser={currentUser} />} />
         <Route
