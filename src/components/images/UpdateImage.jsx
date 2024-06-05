@@ -29,11 +29,13 @@ export const UpdateImage = ({ currentUser }) => {
     const handleSave = (event) => {
         event.preventDefault()
     
-        const image = {
-            url: updatedImage.url,
-            caption: updatedImage.caption
+        const editedImage = {
+            id: image.id,
+            userId: image.userId,
+            url: image.url,
+            caption: image.caption
         }
-        updateImage(image).then(() => {
+        updateImage(editedImage).then(() => {
             navigate("/images")
         })
     
