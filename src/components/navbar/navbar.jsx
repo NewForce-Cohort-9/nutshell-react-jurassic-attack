@@ -14,7 +14,7 @@ export const Navbar = () => {
         <Link className="navbar-link" to="images">Images</Link>
       </li>
       <li className="navbar-item">
-        <Link className="navbar-link">Tasks and Events</Link>
+        <Link className="navbar-link" to="TaskEventContainer">Tasks and Events</Link>
       </li>
       <li className="navbar-item">
         <Link className="navbar-link">Chat</Link>
