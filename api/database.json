@@ -35,6 +35,13 @@
       "title": "Mary's Birthday",
       "date": "06/24/2024",
       "location": "Red Lobster"
+    },
+    {
+      "userId": 1,
+      "title": "Pool Party",
+      "date": "08/10/2024",
+      "location": "pool",
+      "id": 2
     }
   ],
   "tasks": [
@@ -42,6 +49,7 @@
       "id": 1,
       "userId": 1,
       "task": "Takeout Trash",
+      "completeByDate": "01/12/25",
       "completed": false
     }
   ],
