@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getArticleById, updateArticle } from "../services/articleservices";
+import { Button } from "reactstrap";
 
 export const EditArticle = () => {
   const [article, setArticle] = useState({});
@@ -75,7 +76,9 @@ export const EditArticle = () => {
           </div>
         </fieldset>
         <fieldset className="form-group">
-            <button className="form-btn" btn-info onClick={handleSave}>Save Article</button>
+          <Button onClick={handleSave}>
+            Save Article
+          </Button>
         </fieldset>
       </form>
     </div>

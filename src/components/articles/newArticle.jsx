@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./articles.css";
 import { useNavigate } from "react-router-dom";
 import { createArticle } from "../services/articleservices";
+import { Button } from "reactstrap";
 
 export const NewArticle = ({currentUser}) => {
   const [newArticle, setNewArticle] = useState({
@@ -69,7 +70,9 @@ export const NewArticle = ({currentUser}) => {
           ></input>
         </fieldset>
         <fieldset>
-            <button onClick={handleSave}>Submit New Article</button>
+          <Button onClick={handleSave}>
+            Submit New Article
+          </Button>
         </fieldset>
       </form>
     </div>
