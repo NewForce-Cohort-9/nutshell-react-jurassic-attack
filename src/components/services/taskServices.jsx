@@ -11,3 +11,14 @@ export const createTasks = (tasks) => {
         body: JSON.stringify(tasks)
     })
 }
+
+export const updateTask = (task) => {
+    return fetch(`http://localhost:8088/tasks/${task.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(task),
+    });
+  };
+  
