@@ -17,7 +17,7 @@ export const Navbar = () => {
         <Link className="navbar-link" to="TaskEventContainer">Tasks and Events</Link>
       </li>
       <li className="navbar-item">
-        <Link className="navbar-link">Chat</Link>
+        <Link className="navbar-link" to="chat">Chat</Link>
       </li>
       {localStorage.getItem("nutshell_user") ? (
         <li className="navbar-item">

@@ -2,9 +2,12 @@
     display: flex;
     flex-wrap: nowrap;
     border: 1px solid #FE5401;
-    margin: 0;
-    width: 100%;
     padding: 0.5rem;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    width: 830px;
+    margin-bottom: 20px;
   }
 
   .navbar-item {

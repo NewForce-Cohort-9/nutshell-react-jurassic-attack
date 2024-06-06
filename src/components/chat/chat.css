@@ -1,0 +1,16 @@
+.chat-display{
+    border: 1px solid gray;
+    overflow-y: scroll;
+    height: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    scrollbar-color: #Fe5401;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.button{
+    background-color: #Fe5401;
+    margin: 5px;
+    border-radius: 5px;
+}

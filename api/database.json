@@ -50,6 +50,31 @@
       "id": 1,
       "userId": 1,
       "text": "Hello All! So happy to be here!"
+    },
+    {
+      "userId": 1,
+      "text": "My new message",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "text": "asdf",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "text": "Hello seth",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "text": "new message",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "text": "another new message",
+      "id": 6
     }
   ],
   "images": [

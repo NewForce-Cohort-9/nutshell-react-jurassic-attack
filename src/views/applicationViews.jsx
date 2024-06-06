@@ -11,6 +11,7 @@ import { UpdateImage } from "../components/images/UpdateImage";
 import { TaskEventContainer } from "../components/TaskEventContainer.jsx";
 import { EventCreateForm } from "../components/forms/EventCreateForm.jsx";
 import { EditArticle } from "../components/articles/editArticle";
+import { Chat } from "../components/chat/chat.jsx";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -48,7 +49,8 @@ export const ApplicationViews = () => {
           <Route index element={<ImageGallery currentUser={currentUser} />} />
           <Route path=":newImage" element={<NewImage currentUser={currentUser} />} />
         </Route>
-        <Route path="/editImages/:imageId" element={<UpdateImage currentUser={currentUser} />} />
+        <Route path="/editImages/:imageId" element={<UpdateImage currentUser={currentUser} />} />\
+        <Route path="/chat" element={<Chat currentUser={currentUser}/>} />
 
         <Route path="TaskEventContainer" element={<TaskEventContainer currentUser={currentUser}/>} />
         <Route path="createEvent" element={<EventCreateForm currentUser={currentUser}/>} />
