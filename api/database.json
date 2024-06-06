@@ -13,11 +13,11 @@
   ],
   "articles": [
     {
-      "id": 1,
-      "userId": 1,
-      "url": "https://www.npr.org/2024/04/24/1246807622/runaway-horses-central-london",
       "title": "Horses Run Rampant Through London",
       "synopsis": "5 military horses escaped last week and ere seen running through London.",
+      "url": "https://www.npr.org/2024/04/24/1246807622/runaway-horses-central-london",
+      "id": 1,
+      "userId": 1,
       "timestamp": "06/04/2024"
     },
     {
@@ -26,6 +26,30 @@
       "url": "",
       "timestamp": "Tue Jun 04 2024 14:49:19 GMT-0400 (Eastern Daylight Time)",
       "id": 2
+    },
+    {
+      "title": "Three Things to do in Morgantown This Weekend",
+      "synopsis": "A list of fun activities to do in Morgantown.",
+      "url": "https://www.thedaonline.com/culture/three-things-to-do-in-morgantown-this-weekend/article_55cb09e0-23d1-11ef-88e7-df23e20eb63c.html",
+      "timestamp": "Thu Jun 06 2024 13:32:34 GMT-0400 (Eastern Daylight Time)",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "title": "Little Girl Makes Motivational Posters For A Struggling Bee",
+      "synopsis": "Exactly what the title says",
+      "url": "https://www.sunnyskyz.com/blog/3771/Little-Girl-Makes-Motivational-Posters-For-A-Struggling-Bee",
+      "timestamp": "Thu Jun 06 2024 13:35:54 GMT-0400 (Eastern Daylight Time)",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "title": "We Can't Resist This Cat's Adorable Smile",
+      "synopsis": "This cat has a super duper freaking cute adorable smile.",
+      "url": "https://www.sunnyskyz.com/blog/3768/We-Can-t-Resist-This-Cat-s-Adorable-Smile",
+      "timestamp": "Thu Jun 06 2024 13:36:43 GMT-0400 (Eastern Daylight Time)",
+      "userId": 1,
+      "id": 5
     }
   ],
   "events": [
@@ -62,7 +86,32 @@
     {
       "id": 1,
       "userId": 1,
-      "text": "Hello All! So happy to be here!"
+      "text": "I edited this post"
+    },
+    {
+      "userId": 1,
+      "text": "My new message",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "text": "asdf",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "text": "Hello seth",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "text": "new message",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "text": "another new message",
+      "id": 6
     }
   ],
   "images": [

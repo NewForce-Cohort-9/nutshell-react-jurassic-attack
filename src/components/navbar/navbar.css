@@ -1,10 +1,12 @@
 .navbar {
     display: flex;
     flex-wrap: nowrap;
-    border: 1px solid #FE5401;
-    margin: 0;
-    width: 100%;
+    border: 3px solid #FE5401;
     padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #FE5401;
+    overflow: hidden;
   }
 
   .navbar-item {
@@ -15,11 +17,12 @@
     color: white;
     background-color: #5300FE;
     width: fit-content;
-    height: fit-content;
+    height: 48px;
     border-radius: 5px;
     margin: 5px;
     align-items: center;
     justify-content: center;
+    justify-self: baseline;
     
   }
 
@@ -27,7 +30,7 @@
     text-decoration: none;
     font-family: "Quicksand", sans-serif;
     letter-spacing: 1px;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     
   }
@@ -39,3 +42,16 @@
   .navbar-link:hover {
     color: var(--primary);
   }
+  
+  .whole-page{
+    width: 100%;
+    min-width: 880px;
+    align-self: baseline;
+    
+  }
+
+  body{
+    display: flex;
+  }
+
+ 
