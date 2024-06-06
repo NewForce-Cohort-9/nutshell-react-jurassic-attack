@@ -48,9 +48,14 @@
     {
       "id": 1,
       "userId": 1,
-      "task": "Takeout Trash",
       "completeByDate": "01/12/25",
-      "completed": false
+      "completed": true
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "completeByDate": "today",
+      "completed": true
     }
   ],
   "messages": [

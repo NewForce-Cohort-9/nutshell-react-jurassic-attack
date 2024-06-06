@@ -1,8 +1,8 @@
 import { Button, Card, FormGroup, Input, Label, Row } from "reactstrap";
 import { updateTask } from "../services/taskServices.jsx";
 
-export const Task = ({ singleTask }) => {
-  const [completedTask, setCompletedTask] = useEffect([]);
+export const Task = ({ singleTask, getAndSetTasks }) => {
+
 
   const handleCheckComplete = async () => {
     const completedTask = {
@@ -11,14 +11,13 @@ export const Task = ({ singleTask }) => {
       completeByDate: singleTask.completeByDate,
       completed: !singleTask.completed,
     };
- await updateTask(completedTask).then(() => {
-  
- })
+    await updateTask(completedTask)
+      getAndSetTasks()
   };
 
   return (
     <>
-      {singleTask.completeByDate ? (
+      {singleTask.completed ? (
         ""
       ) : (
         <Card
