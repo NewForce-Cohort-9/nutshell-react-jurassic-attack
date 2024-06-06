@@ -1,5 +1,6 @@
 import { Button, Card } from "reactstrap";
 import "./Events.css"
+import { Link } from "react-router-dom";
 
 export const Event = ({ singleEvent }) => {
   return (
@@ -14,9 +15,9 @@ export const Event = ({ singleEvent }) => {
       <h2>{singleEvent.title}</h2>
       <div>Location: {singleEvent.location}</div>
       <div>Date: {singleEvent.date}</div>
-      <Button color="dark" size="sm">
+      <Link to={`/TaskEventContainer/${singleEvent.id}/editEvent`}><Button color="dark" size="sm">
           Edit
-        </Button>
+        </Button></Link>
      
     </Card>
   );

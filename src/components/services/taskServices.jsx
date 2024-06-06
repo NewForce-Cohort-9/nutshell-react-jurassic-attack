@@ -22,3 +22,8 @@ export const updateTask = (task) => {
     });
   };
   
+  export const getTaskById = (task) => {
+    return fetch(
+        `http://localhost:8088/tasks/${task}?_expand=user`
+      ).then((res) => res.json());
+  }

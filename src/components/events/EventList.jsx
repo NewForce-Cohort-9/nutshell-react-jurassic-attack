@@ -18,7 +18,7 @@ export const EventList = () => {
     <div>
       <header className="header-events">Events</header>
       <div>
-      <Link to="/createEvent"><Button 
+      <Link to="/TaskEventContainer/createEvent"><Button 
       outline size="sm">
         Create New Event
       </Button></Link>

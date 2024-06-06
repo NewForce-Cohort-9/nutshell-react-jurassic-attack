@@ -54,18 +54,18 @@
   ],
   "events": [
     {
+      "title": "Mary's Birthday",
       "id": 1,
       "userId": 1,
-      "title": "Mary's Birthday",
-      "date": "06/24/2024",
+      "date": "01/12/2025",
       "location": "Red Lobster"
     },
     {
-      "userId": 1,
       "title": "Pool Party",
+      "id": 2,
+      "userId": 1,
       "date": "08/10/2024",
-      "location": "pool",
-      "id": 2
+      "location": "pool"
     }
   ],
   "tasks": [
@@ -80,6 +80,19 @@
       "userId": 1,
       "completeByDate": "today",
       "completed": true
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "completeByDate": "06/10/2024",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "task": "Water Plants",
+      "completeByDate": "06/10/2024",
+      "completed": false,
+      "id": 4
     }
   ],
   "messages": [
@@ -112,6 +125,11 @@
       "userId": 1,
       "text": "another new message",
       "id": 6
+    },
+    {
+      "userId": 1,
+      "text": "hey",
+      "id": 7
     }
   ],
   "images": [
