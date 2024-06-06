@@ -2,7 +2,7 @@ import "./images.css";
 import { useEffect } from "react";
 import { useState } from "react";
 import { deleteImage, getAllImages } from "../services/ImageService";
-import { Button, Card, CardBody, CardSubtitle } from "reactstrap";
+import { Button, Card, CardBody, CardSubtitle, Col, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 
 
@@ -15,28 +15,23 @@ export const ImageGallery = () => {
         })
     }, []);
 
-    {/* Delete Ticket Button Function */}
-    const handleDelete = () => {
-        deleteImage(image.id).then(() => {
-        setImage()
-        })
-    }
-
-    
     return (
         <>
         <div className="button">
                 <Link to={`/images/newImage`}><button>Add New Image</button></Link>
         </div>
         <div className="images">
-            <div className="single-image">
+            <div>
+                <Row>
+                
                 {images.map((image) => {
                         return (
+                <Col key={image.id}>
                 <Card style={{ 
                     width: '12rem',
                     padding: '1em',
+                    margin: 5,
                     }}
-                    key={image.id}
                 >
                     
                     <img src={image.url} alt="" />
@@ -48,7 +43,7 @@ export const ImageGallery = () => {
                     >
                         {image.caption}
                     </CardSubtitle>
-                    <Link to={`/notImages/${image.id}`}>
+                    <Link to={`/editImages/${image.id}`}>
                         <Button color="primary" size="sm">
                             Edit
                         </Button>
@@ -58,8 +53,11 @@ export const ImageGallery = () => {
                     </Button>
                 </CardBody>
                 </Card>
+                </Col>
                 )
                 })}
+                
+                </Row>
             </div>
         </div>
         </>

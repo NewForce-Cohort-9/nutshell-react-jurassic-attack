@@ -48,7 +48,7 @@ export const ApplicationViews = () => {
           <Route index element={<ImageGallery currentUser={currentUser} />} />
           <Route path=":newImage" element={<NewImage currentUser={currentUser} />} />
         </Route>
-        <Route path="/notImages/:imageId" element={<UpdateImage currentUser={currentUser} />} />
+        <Route path="/editImages/:imageId" element={<UpdateImage currentUser={currentUser} />} />
 
         <Route path="TaskEventContainer" element={<TaskEventContainer currentUser={currentUser}/>} />
         <Route path="createEvent" element={<EventCreateForm currentUser={currentUser}/>} />

@@ -2,8 +2,5 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
-
-.single-image{
-    width: 30%;
+    align-items: center;
 }
