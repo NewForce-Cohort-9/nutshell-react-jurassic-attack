@@ -15,6 +15,14 @@ export const ImageGallery = () => {
         })
     }, []);
 
+    {/* Delete Image Button Function */}
+    const handleDelete = (image) => {
+        deleteImage(image.id).then(() => {
+        getAllImages().then((imageArray) => {
+            setImages(imageArray)
+        })})
+    }
+
     return (
         <>
         <div className="button">
@@ -48,7 +56,9 @@ export const ImageGallery = () => {
                             Edit
                         </Button>
                     </Link>
-                    <Button color="danger" size="sm">
+                    <Button color="danger" size="sm"
+                        onClick={() => handleDelete(image)}
+                    >
                         Delete
                     </Button>
                 </CardBody>
