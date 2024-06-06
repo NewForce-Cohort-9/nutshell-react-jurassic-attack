@@ -1,6 +1,6 @@
 .articles{
     display: flex;
-    flex-direction: row-reverse;
+    margin: 5px;
 }
 
 .single-article{
@@ -14,4 +14,8 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.body  {
+    width: 800;
 }

@@ -33,16 +33,12 @@ export const Articles = ({ currentUser }) => {
     <div>
       <div>
         <Link to="/newArticle">
-            <button className="button">
-            Submit New Article
-            </button>
-                
-            
+          <button className="button">Submit New Article</button>
         </Link>
       </div>
       <div className="articles">
         <div>
-          <Row>
+          <Row className="flex-row-reverse">
             {myArticles.map((article) => {
               return (
                 <Col key={article.id}>
@@ -57,13 +53,14 @@ export const Articles = ({ currentUser }) => {
                     <p>{article.synopsis}</p>
                     <a href={article.url}>Source</a>
                     <Link to={`/articles/${article.id}/editArticle`}>
-                      <Button color="primary" size="sm">
+                      <Button color="primary" size="sm" style={{ margin: 5 }}>
                         Edit
                       </Button>
                     </Link>
                     <Button
                       color="danger"
                       size="sm"
+                      style={{ margin: 5 }}
                       onClick={() => handleDelete(article)}
                     >
                       Delete

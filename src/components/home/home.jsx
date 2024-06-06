@@ -39,33 +39,30 @@ export const Home = ({ currentUser }) => {
     setMyImages(foundImages);
   }, [images]);
   return (
-    <div>
-      <div className="articles">
-        <div>
+    <div className="body">
+      
+        <div className="articles">
           <Row>
-        {myArticles.map((article) => {
-          return (
-            <Col key={article.id}>
-            <Card 
-            style={{
-              width: "12rem",
-              padding: "1em",
-              margin: 5,
-            }} >
-
-              <h2>{article.title}</h2>
-              <p>{article.synopsis}</p>
-              <a href={article.url}>Source</a>
-            
-            </Card>
-            
-            </Col>
-          );
-        })}
-
+            {myArticles.map((article) => {
+              return (
+                <Col key={article.id}>
+                  <Card
+                    style={{
+                      width: "12rem",
+                      padding: "1em",
+                      margin: 5,
+                    }}
+                  >
+                    <h2>{article.title}</h2>
+                    <p>{article.synopsis}</p>
+                    <a href={article.url}>Source</a>
+                  </Card>
+                </Col>
+              );
+            })}
           </Row>
         </div>
-      </div>
+      
 
       {/* work on the image section */}
 

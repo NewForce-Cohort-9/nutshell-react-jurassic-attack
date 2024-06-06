@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./chat.css";
 import { createNewChat, getAllChat } from "../services/chatServices";
 import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
 export const Chat = ({ currentUser }) => {
   const [chats, setChats] = useState([]);
   const [message, setMessage] = useState({});
@@ -25,16 +26,28 @@ export const Chat = ({ currentUser }) => {
         <div className="chat-display">
           <div className="chat-box">
             {chats.map((chat) => {
-              return (
-                <div className="message">
-                  <h3>{chat.user.username}</h3>
-                  <p>{chat.text}</p>
-                </div>
-              );
+                if(chat.userId === currentUser.id) {
+                    return (
+                      <div className="message">
+                                                <Link to={`${chat.id}/editChat`}><button className="chat-button">Edit</button></Link>
+                        <p><b>{chat.user.username}</b></p>
+                        <p>{chat.text}</p>
+
+                      </div>
+                    );
+
+                } else{
+                    return (
+                        <div className="message">
+                          <p><b>{chat.user.username}</b></p>
+                          <p>{chat.text}</p>
+                        </div>
+                      );
+                }
             })}
           </div>
         </div>
-        <div className="message">
+        <div>
           <form>
             <fieldset>
               <input

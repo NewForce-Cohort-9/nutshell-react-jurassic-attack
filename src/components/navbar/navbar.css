@@ -3,11 +3,10 @@
     flex-wrap: nowrap;
     border: 3px solid #FE5401;
     padding: 0.5rem;
-    margin: auto;
-    top: 0;
-    width: 830px;
+    width: 100%;
     margin-bottom: 20px;
     background-color: #FE5401;
+    overflow: hidden;
   }
 
   .navbar-item {
@@ -23,6 +22,7 @@
     margin: 5px;
     align-items: center;
     justify-content: center;
+    justify-self: baseline;
     
   }
 
@@ -42,3 +42,16 @@
   .navbar-link:hover {
     color: var(--primary);
   }
+  
+  .whole-page{
+    width: 100%;
+    min-width: 880px;
+    align-self: baseline;
+    
+  }
+
+  body{
+    display: flex;
+  }
+
+ 

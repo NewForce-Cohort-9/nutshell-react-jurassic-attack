@@ -58,7 +58,7 @@ export const ImageGallery = ({ currentUser }) => {
                         {image.caption}
                     </CardSubtitle>
                     <Link to={`/editImages/${image.id}`}>
-                        <Button color="primary" size="sm">
+                        <Button color="primary" size="sm" style={{margin: 5}}>
                             Edit
                         </Button>
                     </Link>
