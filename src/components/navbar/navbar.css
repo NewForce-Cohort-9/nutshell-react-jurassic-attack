@@ -1,13 +1,13 @@
 .navbar {
     display: flex;
     flex-wrap: nowrap;
-    border: 1px solid #FE5401;
+    border: 3px solid #FE5401;
     padding: 0.5rem;
     margin: auto;
-    position: fixed;
     top: 0;
     width: 830px;
     margin-bottom: 20px;
+    background-color: #FE5401;
   }
 
   .navbar-item {
@@ -18,7 +18,7 @@
     color: white;
     background-color: #5300FE;
     width: fit-content;
-    height: fit-content;
+    height: 48px;
     border-radius: 5px;
     margin: 5px;
     align-items: center;
@@ -30,7 +30,7 @@
     text-decoration: none;
     font-family: "Quicksand", sans-serif;
     letter-spacing: 1px;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     
   }

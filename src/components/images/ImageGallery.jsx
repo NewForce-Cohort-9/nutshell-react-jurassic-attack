@@ -25,8 +25,8 @@ export const ImageGallery = () => {
 
     return (
         <>
-        <div className="button">
-                <Link to={`/images/newImage`}><button>Add New Image</button></Link>
+        <div>
+                <Link to={`/images/newImage`}><button className="button">Add New Image</button></Link>
         </div>
         <div className="images">
             <div>

@@ -31,11 +31,13 @@ export const Articles = ({ currentUser }) => {
 
   return (
     <div>
-      <div className="button">
+      <div>
         <Link to="/newArticle">
-            <Button>
-                Submit New Article
-            </Button>
+            <button className="button">
+            Submit New Article
+            </button>
+                
+            
         </Link>
       </div>
       <div className="articles">
