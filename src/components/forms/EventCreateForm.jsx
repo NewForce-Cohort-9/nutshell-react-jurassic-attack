@@ -24,7 +24,7 @@ export const EventCreateForm = ({currentUser}) => {
 
   return (
     <Form>
-      <h2>Create New Event</h2>
+      <h2 className="header-new-event">Create New Event</h2>
       <div>
         <Input
           text="text"
