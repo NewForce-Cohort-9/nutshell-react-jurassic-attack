@@ -6,14 +6,20 @@ import { Button, Card, CardBody, CardSubtitle, Col, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 
 
-export const ImageGallery = () => {
+export const ImageGallery = ({ currentUser }) => {
     const [images, setImages] = useState([]);
+    const [myImages, setMyImages] = useState([]);
 
     useEffect(() => {
         getAllImages().then((imageArray) => {
             setImages(imageArray)
         })
     }, []);
+
+    useEffect(() => {
+        const foundImages = images.filter((image) => image.userId === currentUser.id)
+        setMyImages(foundImages)
+     },[images])
 
     {/* Delete Image Button Function */}
     const handleDelete = (image) => {
@@ -32,7 +38,7 @@ export const ImageGallery = () => {
             <div>
                 <Row>
                 
-                {images.map((image) => {
+                {myImages.map((image) => {
                         return (
                 <Col key={image.id}>
                 <Card style={{ 
