@@ -30,11 +30,11 @@
   ],
   "events": [
     {
-      "title": "hey",
+      "title": "Mary's Birthday",
       "id": 1,
       "userId": 1,
-      "date": "06/02/2024",
-      "location": "place"
+      "date": "01/12/2025",
+      "location": "Red Lobster"
     },
     {
       "title": "Pool Party",
@@ -56,6 +56,19 @@
       "userId": 1,
       "completeByDate": "today",
       "completed": true
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "completeByDate": "06/10/2024",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "task": "Water Plants",
+      "completeByDate": "06/10/2024",
+      "completed": false,
+      "id": 4
     }
   ],
   "messages": [

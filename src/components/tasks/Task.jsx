@@ -1,5 +1,6 @@
 import { Button, Card, FormGroup, Input, Label, Row } from "reactstrap";
 import { updateTask } from "../services/taskServices.jsx";
+import { Link } from "react-router-dom";
 
 export const Task = ({ singleTask, getAndSetTasks }) => {
 
@@ -41,9 +42,9 @@ export const Task = ({ singleTask, getAndSetTasks }) => {
               />
               <Label check>done</Label>
             </FormGroup>
-            <Button color="light" size="sm">
+            <Link to={`/TaskEventContainer/${singleTask.id}/editTask`}> <Button color="light" size="sm">
               Edit
-            </Button>
+            </Button> </Link>
           </Row>
         </Card>
       )}

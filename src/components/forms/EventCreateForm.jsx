@@ -12,7 +12,7 @@ export const EventCreateForm = ({currentUser}) => {
   const handleSave = (event) => {
     event.preventDefault();
     const newEvent = {
-        userId: currentUser.id,
+      userId: currentUser.id,
       title: myEvent.title,
       date: myEvent.date,
       location: myEvent.location,

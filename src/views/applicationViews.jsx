@@ -12,6 +12,7 @@ import { EventCreateForm } from "../components/forms/EventCreateForm.jsx";
 import { EditArticle } from "../components/articles/editArticle";
 import { TaskCreateForm } from "../components/forms/TaskCreateForm.jsx";
 import { EditEvent } from "../components/forms/EventEditForm.jsx";
+import { EditTask } from "../components/forms/TaskEditForm.jsx";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -73,6 +74,10 @@ export const ApplicationViews = () => {
           <Route
             path=":eventId/editEvent"
             element={<EditEvent currentUser={currentUser} />}
+          />
+          <Route
+            path=":taskId/editTask"
+            element={<EditTask currentUser={currentUser} />}
           />
         </Route>
       </Route>

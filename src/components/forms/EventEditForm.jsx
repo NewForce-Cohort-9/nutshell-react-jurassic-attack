@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getEventById, updateEvent } from "../services/eventServices";
 
 export const EditEvent = () => {
@@ -32,7 +32,7 @@ export const EditEvent = () => {
       <form>
         <h2>Edit Event</h2>
         <fieldset>
-          <div>
+          <div className="form-title">
             <input
               text="text"
               className="form-control"
@@ -46,21 +46,7 @@ export const EditEvent = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div >
-            <input
-              text="text"
-              className="form-control"
-              placeholder={myEvent.date}
-              onChange={(event) => {
-                const eventCopy = { ...myEvent };
-                eventCopy.date = event.target.value;
-                setMyEvent(eventCopy);
-              }}
-            ></input>
-          </div>
-        </fieldset>
-        <fieldset>
-          <div >
+          <div className="form-title">
             <input
               text="text"
               className="form-control"
@@ -73,8 +59,22 @@ export const EditEvent = () => {
             ></input>
           </div>
         </fieldset>
+        <fieldset>
+          <div className="form-title">
+            <input
+              text="text"
+              className="form-control"
+              placeholder={myEvent.date}
+              onChange={(event) => {
+                const eventCopy = { ...myEvent };
+                eventCopy.date = event.target.value;
+                setMyEvent(eventCopy);
+              }}
+            ></input>
+          </div>
+        </fieldset>
         <fieldset className="form-group">
-        <button className="form-btn" btn-info onClick={handleSave}>
+          <button className="form-btn" btn-info onClick={handleSave}>
             Save Event
           </button>
         </fieldset>
