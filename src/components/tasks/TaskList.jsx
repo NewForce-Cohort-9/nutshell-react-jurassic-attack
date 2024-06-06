@@ -17,7 +17,7 @@ useEffect(() => {
 },[])
 
   return (
-    <div>
+    <div className="task-container">
       <header className="header-tasks">Tasks</header>
       <Link to="/TaskEventContainer/createTask"><Button outline size="sm">Create New Task</Button></Link>
       {allTasks.map((singleTask) => {
