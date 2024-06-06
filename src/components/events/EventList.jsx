@@ -23,7 +23,7 @@ export const EventList = () => {
         Create New Event
       </Button></Link>
       {allEvents.map((singleEvent) => {
-        return <Event id={singleEvent.id} singleEvent={singleEvent} />;
+        return <Event key={singleEvent.id} singleEvent={singleEvent} />;
       })}
       </div>
     </div>
