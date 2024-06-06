@@ -9,11 +9,6 @@
       "id": 2,
       "username": "Altoid",
       "email": "email@email.com"
-    },
-    {
-      "email": "hotmail@hotmail.com",
-      "username": "pikachu",
-      "id": 3
     }
   ],
   "articles": [
@@ -24,6 +19,13 @@
       "title": "Horses Run Rampant Through London",
       "synopsis": "5 military horses escaped last week and ere seen running through London.",
       "timestamp": "06/04/2024"
+    },
+    {
+      "title": "",
+      "synopsis": "",
+      "url": "",
+      "timestamp": "Tue Jun 04 2024 14:49:19 GMT-0400 (Eastern Daylight Time)",
+      "id": 2
     }
   ],
   "events": [
@@ -33,13 +35,6 @@
       "title": "Mary's Birthday",
       "date": "06/24/2024",
       "location": "Red Lobster"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "title": "Family Reunion",
-      "date": "09/07/2024",
-      "location": "Glenn Park"
     }
   ],
   "tasks": [
@@ -47,14 +42,6 @@
       "id": 1,
       "userId": 1,
       "task": "Takeout Trash",
-      "completeByDate": "07/01/2024",
-      "completed": false
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "task": "Appointment",
-      "completeByDate": "08/16/2024",
       "completed": false
     }
   ],
@@ -71,6 +58,18 @@
       "userId": 1,
       "url": "https://static.miraheze.org/greatcharacterswiki/a/a3/Farquaad.png",
       "caption": "He's literally so dreamy <3"
+    },
+    {
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2wTDWsejeqXPp8-wSnLgd497j6XDVM9XwuZhH6t82HPQwTfxQT9DZqBZstRMcjOb0M4&usqp=CAU",
+      "caption": "The walls have ears, Eddy",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "url": "https://pm1.aminoapps.com/6759/e814f3473f6a0c2a480cfe2b8f4ab8b39bd7bdb2v2_00.jpg",
+      "caption": "It's hot in ToPEkA!",
+      "userId": 1,
+      "id": 3
     }
   ],
   "friends": [
