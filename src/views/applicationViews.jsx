@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 import { Home } from "../components/home/home.jsx"
-
-=========
->>>>>>>>> Temporary merge branch 2
 import { Outlet, Route, Routes } from "react-router-dom";
 import { Articles } from "../components/articles/articles";
 import { NewArticle } from "../components/articles/newArticle";
@@ -34,11 +31,11 @@ export const ApplicationViews = () => {
           </>
         }
       >
-<<<<<<<<< Temporary merge branch 1
+
         <Route path="/"element={<Home currentUser={currentUser}/>} />
-        <Route path="articles" element={<Articles currentUser={currentUser}/>} />
-        <Route path="newArticle" element={<NewArticle currentUser={currentUser}/>} />
-=========
+        {/* <Route path="articles" element={<Articles currentUser={currentUser}/>} />
+        <Route path="newArticle" element={<NewArticle currentUser={currentUser}/>} /> */}
+
         <Route path="articles">
           <Route index element={<Articles currentUser={currentUser} />} />
         <Route
@@ -58,7 +55,7 @@ export const ApplicationViews = () => {
 
         <Route path="TaskEventContainer" element={<TaskEventContainer currentUser={currentUser}/>} />
         <Route path="createEvent" element={<EventCreateForm currentUser={currentUser}/>} />
->>>>>>>>> Temporary merge branch 2
+
       </Route>
     </Routes>
   );
