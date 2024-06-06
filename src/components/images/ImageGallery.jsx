@@ -31,8 +31,8 @@ export const ImageGallery = ({ currentUser }) => {
 
     return (
         <>
-        <div className="button">
-                <Link to={`/images/newImage`}><button>Add New Image</button></Link>
+        <div>
+                <Link to={`/images/newImage`}><button className="button">Add New Image</button></Link>
         </div>
         <div className="images">
             <div>
@@ -58,7 +58,7 @@ export const ImageGallery = ({ currentUser }) => {
                         {image.caption}
                     </CardSubtitle>
                     <Link to={`/editImages/${image.id}`}>
-                        <Button color="primary" size="sm">
+                        <Button color="primary" size="sm" style={{margin: 5}}>
                             Edit
                         </Button>
                     </Link>
