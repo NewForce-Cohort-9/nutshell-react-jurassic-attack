@@ -30,18 +30,18 @@
   ],
   "events": [
     {
+      "title": "hey",
       "id": 1,
       "userId": 1,
-      "title": "Mary's Birthday",
-      "date": "06/24/2024",
-      "location": "Red Lobster"
+      "date": "06/02/2024",
+      "location": "place"
     },
     {
-      "userId": 1,
       "title": "Pool Party",
+      "id": 2,
+      "userId": 1,
       "date": "08/10/2024",
-      "location": "pool",
-      "id": 2
+      "location": "pool"
     }
   ],
   "tasks": [
