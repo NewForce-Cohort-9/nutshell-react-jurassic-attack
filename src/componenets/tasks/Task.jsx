@@ -15,19 +15,15 @@ export const Task = ({ singleTask }) => {
 
       <div>Complete By: {singleTask.completeByDate}</div>
 
-<Row>
-<FormGroup check>
-    <Input type="checkbox" />
-    <Label check>
-      done
-    </Label>
-  </FormGroup>
-
+      <Row>
+        <FormGroup check>
+          <Input type="checkbox" />
+          <Label check>done</Label>
+        </FormGroup>
         <Button color="light" size="sm">
           Edit
         </Button>
-        </Row>
-
+      </Row>
     </Card>
   );
 };

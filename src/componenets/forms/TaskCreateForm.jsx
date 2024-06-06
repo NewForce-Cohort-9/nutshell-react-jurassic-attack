@@ -24,7 +24,7 @@ export const TaskCreateForm = ({ currentUser }) => {
 
   return (
     <Form>
-      <h2>Create New Task</h2>
+      <h2 className="header-new-task">Create New Task</h2>
       <div>
         <Input
           type="text"
