@@ -1,3 +1,5 @@
+// Author: Seth, Purpose: Pulls relevant information from database via articlesServices.jsx. Displays all articles for the logged-in user. Allows users to create new articles, and edit or delete existing articles.
+
 import { useEffect, useState } from "react";
 import "./articles.css";
 import { deleteArticle, getAllArticles } from "../services/articleservices";

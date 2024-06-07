@@ -1,3 +1,5 @@
+//Author: Seth, Purpose: Final compiling of application routes to also include Login, Register, and Authorized functionalities.
+
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";

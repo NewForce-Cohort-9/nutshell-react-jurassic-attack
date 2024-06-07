@@ -1,3 +1,5 @@
+//Author: Seth, Purpose: Form to create new articles that and adds them to the database.
+
 import { useState } from "react";
 import "./articles.css";
 import { useNavigate } from "react-router-dom";

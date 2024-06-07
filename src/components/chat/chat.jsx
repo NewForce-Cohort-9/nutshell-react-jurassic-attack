@@ -1,7 +1,8 @@
+//Author: Seth, Purpose: Displays chat messages from all users in one chat box with the chat message and username. Input and submit button to create a new message. Displays an edit chat button for the logged in user's messages.
+
 import { useEffect, useState } from "react";
 import "./chat.css";
 import { createNewChat, getAllChat } from "../services/chatServices";
-import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
 export const Chat = ({ currentUser }) => {
   const [chats, setChats] = useState([]);
