@@ -1,3 +1,5 @@
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Form to Edit an existing Event for display and corrects it in the database*/}
+
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getEventById, updateEvent } from "../services/eventServices";

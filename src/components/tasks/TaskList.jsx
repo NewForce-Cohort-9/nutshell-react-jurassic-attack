@@ -1,3 +1,5 @@
+{/* AUTHOR: Chelsea Brooks | PURPOSE: List of all Tasks */}
+
 import React, { useState, useEffect } from "react";
 import "./Tasks.css";
 import { getAllTasks } from "../services/taskServices.jsx";

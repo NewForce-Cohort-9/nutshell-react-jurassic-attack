@@ -1,3 +1,5 @@
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Form to Create a new Event for display and adds them to the database*/}
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createEvent } from "../services/eventServices.jsx";

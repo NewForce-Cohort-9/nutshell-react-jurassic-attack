@@ -1,3 +1,5 @@
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Single Task Card displayed on the DOM*/}
+
 import { Button, Card, FormGroup, Input, Label, Row } from "reactstrap";
 import { updateTask } from "../services/taskServices.jsx";
 import { Link } from "react-router-dom";
