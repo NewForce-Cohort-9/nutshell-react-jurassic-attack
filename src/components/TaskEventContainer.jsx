@@ -2,14 +2,14 @@ import { Col, Row } from "reactstrap";
 import { EventList } from "./events/EventList.jsx";
 import { TaskList } from "./tasks/TaskList.jsx";
 
-export const TaskEventContainer = () => {
+export const TaskEventContainer = ({currentUser}) => {
   return (
     <Row>
       <Col>
-        <EventList />
+        <EventList currentUser={currentUser} />
       </Col>
       <Col>
-        <TaskList />
+        <TaskList currentUser={currentUser}/>
       </Col>
     </Row>
   );
