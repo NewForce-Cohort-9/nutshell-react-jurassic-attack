@@ -1,3 +1,6 @@
+{/* AUTHOR: Macey Lewis | PURPOSE: Nutshell Edit Image in Image Gallery */}
+
+
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button, Form, FormGroup, Input } from "reactstrap";
@@ -44,7 +47,7 @@ export const UpdateImage = ({ currentUser }) => {
     });
   };
 
-  // JSX to display allImages
+  // JSX to display Update/Edit Image Form
   return (
     <div className="form">
       <Form className="article-form">
@@ -73,6 +76,7 @@ export const UpdateImage = ({ currentUser }) => {
         </FormGroup>
       </Form>
 
+      {/* Save/Submit Image Button */}
       <Button color="primary" onClick={handleSave}>
         Save Image
       </Button>
