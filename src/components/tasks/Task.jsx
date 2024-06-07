@@ -1,3 +1,5 @@
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Nutshell Single Task Card */}
+
 import { Button, Card, FormGroup, Input, Label, Row } from "reactstrap";
 import { updateTask } from "../services/taskServices.jsx";
 import { Link } from "react-router-dom";

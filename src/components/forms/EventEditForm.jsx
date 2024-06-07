@@ -1,3 +1,5 @@
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Nutshell Form to Edit an existing Event for display*/}
+
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getEventById, updateEvent } from "../services/eventServices";

@@ -1,3 +1,5 @@
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Nutshell Form to Create a new Event for display*/}
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createEvent } from "../services/eventServices.jsx";
