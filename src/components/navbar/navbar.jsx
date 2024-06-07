@@ -1,3 +1,5 @@
+//Author: Seth, Purpose: Created the navbar that will be displayed on every page, and set appropriate routes for the corresponding buttons.
+
 import { Link } from "react-router-dom";
 import "./navbar.css";
 

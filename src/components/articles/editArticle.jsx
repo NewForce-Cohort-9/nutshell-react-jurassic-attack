@@ -1,3 +1,5 @@
+//Author: Seth, Purpose: Form to edit existing articles and updating tem in the database.
+
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getArticleById, updateArticle } from "../services/articleservices";

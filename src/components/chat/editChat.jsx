@@ -1,3 +1,5 @@
+//Author: Seth, Purpose: Form to edit the logged in user's messages.
+
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getChatById, updateChat } from "../services/chatServices";
