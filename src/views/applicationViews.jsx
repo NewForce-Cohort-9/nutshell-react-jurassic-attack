@@ -1,3 +1,4 @@
+//Author: Chelsea, Macey, Ben, Michael, Seth. Purpose: Compiled routes with appropriate elements, and setting paths for the application to follow. 
 import { useEffect, useState } from "react";
 import { Home } from "../components/home/home.jsx";
 import { Outlet, Route, Routes } from "react-router-dom";

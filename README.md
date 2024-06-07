@@ -4,96 +4,63 @@
 
 1. Clone this repository
 1. `cd` into the directory it creates
+1. Open another terminal window and `cd` into the directory labeled "api."
+1. Run `json-server --watch database.json --port 8088`
 1. Run `npm install` and wait for all dependencies to be installed
 1. Run `npm run dev` to verify that installation was successful.
 
 ## What is Reactive Nutshell?
 
-Nutshell is a new product offering that you have been tasked with building. It's an app for people to use to organize their daily tasks, events, news article, friends, and chat messages.
+Nutshell is a new product offering to help manage your busy life. With Nutshell, you can save articles, upload photos, track upcoming events and task, and chat with other users.
 
-You will be using the React library to build out this application.
+### Login/Register
 
-To start you off, here's an example of what the resources in your API should look like once it's populated with some data from your application.
+Upon first running the application, you will be prompted with a login screen. If you want to use an existing account, enter `gmail@gmail.com` into the text box and click login. This will take you to the home dashboard.
 
-### Users
+If you want to register as a new user, click the `Register` button. This will take you to the Register page. Input the relevant information and create your account. After clicking register, it will automatically log you in as that user.
 
-```json
-{ "id": 1, "username": "Steve", "email": "me@me.com" }
-```
+### Dashboard
 
-### Messages
+After logging in, you will be brought to the dashboard. The dashboard will display your most recent saved articles and images. 
 
-```json
-{ "id": 1, "userId": 1, "message": "What's up?" }
-```
+If you logged in as the prepared user, you will see several articles and photos appear. 
 
-### News
+If you logged in as a new user, this screen will be blank, apart from the Navbar.
 
-```json
-{
-    "id": 1,
-    "userId": 2,
-    "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-    "title": "Wormholes Allow Information to Escape Black Holes",
-    "synopsis": "Check out this recent discovery about workholes"
-}
-```
+### Articles
 
-### Friends
+Clicking on the `Articles` tab in the navbar will bring you to the Articles page. This page will display all articles a user has saved: the title, the synopsis, and the source.
 
-```json
-{ "id": 1, "userId": 1, "loggedInUserId": 3 }
-```
+At the top of the page, under the navbar, there is a button that says `Submit New Article`. Clicking on this button will direct you to the form to create a new article. Fill out the relevant information and click `Submit` and it will add your new article to the database
 
-### Tasks
-
-```json
-{ "id": 1, "userId": 3, "task": "Take out garbage" }
-```
+On each article card, there are 3 options to click on: `Source`, `Edit`, and `Delete`. Clicking on `Source` will direct you to the article itself. Clicking on `Delete` will permanently remove an article from the database and it will no longer appear. Clicking on `Edit` will pull up a form to edit an article. Clicking `Save` on this form will save your edited article to the database.
 
 ### Images
 
-```json
-{ "id": 1, "userId": 3, "url": "www.taco.com", "caption": "OMG look at that taco" }
-```
+Clicking on the `Images` tab in the navbar will bring you to the Images page. This page will display all images a user has saved: the photo and the caption.
 
-## Professional Requirements
+At the top of the page, under the navbar, there is a button that says `Submit New Image`. Clicking on this button will direct you to the form to create a new image. Fill out the relevant information and click `Submit` and it will add your new image to the database
 
-1. All teammates must use React and JSON-server. 
-1. Each module should have a comment at the top with the following info: author(s) and purpose of module
-1. Each project should utilize a CSS Library of your choosing.
-1. The README for your project should include instructions on how another person can download and run the application
-1. An ERD showing the database relationships. A screenshot/image should be included on your README.
+On each image card, there are 2 options to click on: `Edit` and `Delete`. Clicking on `Delete` will permanently remove an image from the database and it will no longer appear. Clicking on `Edit` will pull up a form to edit an image. Clicking `Save` on this form will save your edited image to the database.
 
-## How to Handle Authentication
+### Tasks and Events
 
-You will be using local storage to keep track of which user has logged into Nutshell. When the user fills out the registration form, you will POST their username and password to the `users` collection in your API. You will then immediately take the `id` of the object in the response and save it to local storage.
+Clicking on the `Tasks and Events` tab in the navbar will bring you to the Tasks and Events page. This page will display all tasks and events a user has saved. For events, this includes: the title of the event, the location, and the date. For tasks,this includes: the title of the task, the date it needs to be completed, and whether or not it's been completed.
 
-```js
-localStorage.setItem("activeUser", user.id)
-```
+At the top of the page, under the navbar, there is a button that says `Create New Event`. Clicking on this button will direct you to the form to create a new event. Fill out the relevant information and click `Submit` and it will add your new event to the database
 
-If you add a Logout feature, all you will need to do is remove the session storage item.
+On each event card, there is only one option to click on: `Edit`.  Clicking on `Edit` will pull up a form to edit an event. Clicking `Save` on this form will save your edited image to the database.
 
-```js
-localStorage.removeItem("activeUser")
-```
+At the top of the page, under the navbar, there is a button that says `Create New Task`. Clicking on this button will direct you to the form to create a new task. Fill out the relevant information and click `Submit` and it will add your new task to the database
 
-## Keep in mind some tips for a good usable app
-1. Use acceptable conventions
-   * Logo positioned at top left
-   * Navigation across the top or down the left side
-2. Visual hierarchy
-   * Most important information is the most prominent
-3. Break pages up into defined sections
-   * Logically related content should be related visually
-4. That which is clickable should be obviously clickable.
-5. Eliminate distractions
-   * Use only two typefaces
-   * Limit color pallet (3 colors with black and white)
-   * Use a grid
-6. Support scanning (users don't read)
-   * Use plenty of headings
-   * Short paragraphs
-   * Bulleted lists
-7. Strive for consistency.
+On each event card, there are 2 options to click on: `Edit` and a checkbox next to the word `Done`. Clicking on `Edit` will pull up a form to edit an image. Clicking `Save` on this form will save your edited image to the database. Clicking on the checkbox next to `Done` will mark the task as completed. This will keep your task in the database, but it will no longer show on the Tasks and Events page.
+
+### Chat
+
+Clicking on the `Chat` tab in the navbar will direct you to the Chat page. This page will display the chat-box where all chats from every user will appear. Below the chat box is the new message field. Typing in this field and clicking the `Send Message` button will create a new message for all users to see.
+
+On messages sent by the current user, an `Edit` button will appear on the right side of the message. Clicking on this button will direct you to a form to edit your messages. Clicking `Save Chat` will successfully edit your message in the database and for others to see.
+
+### Logout
+
+Clicking on the `Logout` tab in the navbar will successfully log the current user out of the application and redirect them back to the login screen.

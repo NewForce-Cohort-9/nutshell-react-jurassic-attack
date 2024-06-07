@@ -1,3 +1,5 @@
+//Author: Seth, Purpose: All fetch services relating to login.jsx and register.jsx and database.json. This includes: receiving data, creating data, and editing data.
+
 export const getUserByEmail = (email) => {
   return fetch(`http://localhost:8088/users?email=${email}`).then((res) =>
     res.json()

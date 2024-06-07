@@ -1,3 +1,5 @@
+//Author: Seth, Purpose: All fetch services relating to chat.jsx and editChat.jsx and database.json. This includes: receiving data, creating data, and editing data.
+
 export const getAllChat = () => {
     return fetch(`http://localhost:8088/messages?_expand=user`).then((res) => res.json())
 }

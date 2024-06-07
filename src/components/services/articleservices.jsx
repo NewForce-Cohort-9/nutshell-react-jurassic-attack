@@ -1,3 +1,5 @@
+//Author: Seth, Purpose: All fetch services relating to articles.jsx, editArticle.jsx, and newArticle.jsx and database.json. This includes: receiving data, creating data, deleting data, and editing data.
+
 export const getAllArticles = () => {
     return fetch(`http://localhost:8088/articles`).then((res) => res.json())
 }
