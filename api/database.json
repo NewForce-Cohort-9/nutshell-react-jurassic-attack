@@ -66,6 +66,13 @@
       "userId": 1,
       "date": "08/10/2024",
       "location": "pool"
+    },
+    {
+      "userId": 2,
+      "title": "Car Show",
+      "date": "10/10/2024",
+      "location": "Downtown",
+      "id": 3
     }
   ],
   "tasks": [
@@ -93,6 +100,13 @@
       "completeByDate": "06/10/2024",
       "completed": false,
       "id": 4
+    },
+    {
+      "userId": 2,
+      "task": "Party",
+      "completeByDate": "01/02/2028",
+      "completed": false,
+      "id": 5
     }
   ],
   "messages": [
