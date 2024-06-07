@@ -1,8 +1,11 @@
+{/* AUTHOR: Macey Lewis | PURPOSE: Nutshell Add New Image to Image Gallery */}
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, FormGroup, Input } from "reactstrap";
 import { createImage } from "../services/ImageService";
 
+// ADD NEW IMAGE TO GALLERY
 export const NewImage = ({ currentUser }) => {
     const [newImage, setNewImage] = useState({
         url: "",
@@ -11,6 +14,7 @@ export const NewImage = ({ currentUser }) => {
 
     const navigate = useNavigate();
 
+    {/* Save/Submit Image Button Function */}
     const handleSave = (event) => {
         event.preventDefault()
     
@@ -25,6 +29,7 @@ export const NewImage = ({ currentUser }) => {
     
       }
 
+    // JSX to display Add New Image Form
     return (
         <div className="form">
             <Form className="article-form">
@@ -56,6 +61,8 @@ export const NewImage = ({ currentUser }) => {
                     />
                 </FormGroup>
             </Form>
+
+            {/* Save/Submit Image Button */}
             <Button color="primary" onClick={handleSave}>
                 Submit New Image
             </Button>
