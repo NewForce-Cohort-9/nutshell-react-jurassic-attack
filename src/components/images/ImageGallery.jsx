@@ -1,3 +1,5 @@
+{/* AUTHOR: Macey Lewis | PURPOSE: Nutshell Image Gallery */}
+
 import "./images.css";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -5,7 +7,7 @@ import { deleteImage, getAllImages } from "../services/ImageService";
 import { Button, Card, CardBody, CardSubtitle, Col, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 
-
+// USER IMAGE GALLERY PAGE
 export const ImageGallery = ({ currentUser }) => {
     const [images, setImages] = useState([]);
     const [myImages, setMyImages] = useState([]);
@@ -16,6 +18,7 @@ export const ImageGallery = ({ currentUser }) => {
         })
     }, []);
 
+    {/* Filter Images by User */}
     useEffect(() => {
         const foundImages = images.filter((image) => image.userId === currentUser.id)
         setMyImages(foundImages)
@@ -29,6 +32,7 @@ export const ImageGallery = ({ currentUser }) => {
         })})
     }
 
+    // JSX to display allImages Gallery using Reactstrap
     return (
         <>
         <div>
@@ -57,11 +61,15 @@ export const ImageGallery = ({ currentUser }) => {
                     >
                         {image.caption}
                     </CardSubtitle>
+                    
+                    {/* Edit Image Button */}
                     <Link to={`/editImages/${image.id}`}>
                         <Button color="primary" size="sm" style={{margin: 5}}>
                             Edit
                         </Button>
                     </Link>
+
+                    {/* Delete Image Button */}
                     <Button color="danger" size="sm"
                         onClick={() => handleDelete(image)}
                     >
