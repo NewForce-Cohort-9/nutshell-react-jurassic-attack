@@ -5,8 +5,9 @@ import { Task } from "./Task.jsx";
 import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
 
-export const TaskList = () => {
+export const TaskList = ({currentUser}) => {
   const [allTasks, setAllTasks] = useState([]);
+  const [userTasks, setUserTasks] = useState([]);
 
   const getAndSetTasks = async () => {
     getAllTasks()
@@ -16,11 +17,18 @@ useEffect(() => {
   getAndSetTasks()
 },[])
 
+useEffect(() => {
+  const foundTasks = allTasks.filter(
+    (eachTask) => eachTask.userId === currentUser.id
+  );
+  setUserTasks(foundTasks);
+}, [allTasks]);
+
   return (
-    <div>
+    <div className="task-container">
       <header className="header-tasks">Tasks</header>
       <Link to="/TaskEventContainer/createTask"><Button outline size="sm">Create New Task</Button></Link>
-      {allTasks.map((singleTask) => {
+      {userTasks.map((singleTask) => {
         return <Task key={singleTask.id} singleTask={singleTask} getAndSetTasks={getAndSetTasks}/>;
       })}
     </div>
