@@ -5,14 +5,23 @@ import { Button, Col, Row } from "reactstrap";
 import "./Events.css";
 import { Link } from "react-router-dom";
 
-export const EventList = () => {
+export const EventList = ({currentUser}) => {
   const [allEvents, setAllEvents] = useState([]);
+  const [userEvents, setUserEvents] = useState([]);
 
   useEffect(() => {
     getAllEvents().then((eventArray) => {
       setAllEvents(eventArray);
     });
   }, []);
+
+  useEffect(() => {
+    const foundEvents = allEvents.filter(
+      (eachEvent) => eachEvent.userId === currentUser.id
+    );
+    setUserEvents(foundEvents);
+  }, [allEvents]);
+
 
   return (
     <div>
@@ -22,7 +31,7 @@ export const EventList = () => {
       outline size="sm">
         Create New Event
       </Button></Link>
-      {allEvents.map((singleEvent) => {
+      {userEvents.map((singleEvent) => {
         return <Event key={singleEvent.id} singleEvent={singleEvent} />;
       })}
       </div>
