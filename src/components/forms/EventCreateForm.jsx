@@ -1,4 +1,4 @@
-{/* AUTHOR: Chelsea Brooks | PURPOSE: Nutshell Form to Create a new Event for display*/}
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Form to Create a new Event for display and adds them to the database*/}
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";

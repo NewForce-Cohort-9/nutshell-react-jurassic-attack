@@ -1,4 +1,4 @@
-{/* AUTHOR: Chelsea Brooks | PURPOSE: Nutshell Task Fetch Calls */}
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Task Fetch Calls */}
 
 export const getAllTasks = () => {
     return fetch(`http://localhost:8088/tasks`).then((res) => res.json())

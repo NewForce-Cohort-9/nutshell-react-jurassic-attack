@@ -1,4 +1,4 @@
-{/* AUTHOR: Chelsea Brooks | PURPOSE: Nutshell Form to Edit an existing Event for display*/}
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Form to Edit an existing Event for display and corrects it in the database*/}
 
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";

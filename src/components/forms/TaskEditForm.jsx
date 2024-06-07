@@ -1,4 +1,4 @@
-{/* AUTHOR: Chelsea Brooks | PURPOSE: Nutshell Form to Edit an existing Task for display*/}
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Form to Edit an existing Task for display and corrects them in the database*/}
 
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";

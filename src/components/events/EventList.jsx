@@ -1,4 +1,4 @@
-{/* AUTHOR: Chelsea Brooks | PURPOSE: Nutshell List of all Events */}
+{/* AUTHOR: Chelsea Brooks | PURPOSE: List of all Events */}
 
 import { useEffect, useState } from "react";
 import { getAllEvents } from "../services/eventServices.jsx";

@@ -1,4 +1,4 @@
-{/* AUTHOR: Chelsea Brooks | PURPOSE: Nutshell Container to hold both Tasks and Events to display on DOM */}
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Container to hold both Tasks and Events to display on DOM */}
 
 import { Col, Row } from "reactstrap";
 import { EventList } from "./events/EventList.jsx";

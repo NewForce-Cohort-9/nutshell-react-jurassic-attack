@@ -1,4 +1,4 @@
-{/* AUTHOR: Chelsea Brooks | PURPOSE: Nutshell Single Event Card */}
+{/* AUTHOR: Chelsea Brooks | PURPOSE: Single Event Card displayed on the DOM*/}
 import { Button, Card } from "reactstrap";
 import "./Events.css"
 import { Link } from "react-router-dom";

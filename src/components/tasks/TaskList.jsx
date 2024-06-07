@@ -1,4 +1,4 @@
-{/* AUTHOR: Chelsea Brooks | PURPOSE: Nutshell List of all Tasks */}
+{/* AUTHOR: Chelsea Brooks | PURPOSE: List of all Tasks */}
 
 import React, { useState, useEffect } from "react";
 import "./Tasks.css";
